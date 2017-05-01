@@ -96,7 +96,7 @@ url-pretty: "lkhphuc.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 #google_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "UA-98378462-1"
 
 # Facebook App ID
 # fb_app_id: ""
