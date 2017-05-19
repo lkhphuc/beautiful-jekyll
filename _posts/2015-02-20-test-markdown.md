@@ -1,52 +1,15 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
+title: Implement your own ML algorithm: Linear Regression
+subtitle: Learn to implement Machine Learning algorithm from scratch
 ---
+In this tutorial, together we will implement our first Machine Learning algorithm, **Linear Regression** using only _numpy_ for mathematical calculation and _matplotlib_ for visualization
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+# What is _Linear Regression_?
+From the independent variables _X_ with _m_ training examples, we have the corressponding dependent variables _y_. In _Linear Regression_, we try to find the linear correlation between _X_ and _y_, that is to best fit a straight line into the given data then using that line to predict the value _y_ of unseen _X_.  
+The function that describes our straight line which was fitted into our data is called the **hypothesis function**. Assumming our data has a straight line that perfectly fit to every training examples of the data, the goal of our ML algorithm is to make the **hypothesis function** similar to the perfect function as much as possible.
 
-**Here is some bold text**
+# Cost Function
+In order to make our **hypothesis function** similar to the perfect function, that is make our **hypothesis function**
 
-## Here is a secondary heading
-
-Here's a useless table:
- 
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
- 
-
-How about a yummy crepe?
-
-![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
+$$a^2 + b^2 = c^2$$
