@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tổng hợp cách tìm địa chỉ IP của Raspberry Pi
+tag: [random, tutorial]
 ---
 
 Nếu bạn mới bắt đầu làm quen và vọc vạch với chiếc Raspberry Pi, các bạn ắt hẳn đều sẽ đi tới bước yêu cầu có sử dụng địa chỉ IP của Raspberry Pi. Đối với nhiều bạn, hẳn sẽ vô cùng bối rối không biết địa chỉ IP là gì và làm sao để tìm và sử dụng nó. Trong bài này mình sẽ cùng các bạn tìm hiểu xem IP là gì, tại sao nhiều dịch vụ cần nó và các cách để tìm ra nó.
