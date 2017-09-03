@@ -1,9 +1,11 @@
 ---
 layout: post
 title: How to plot a 3D Earth map using Basemap and Matplotlib
-image: /img/3d-basemap-mpl/mpl-logo.png
+image: /img/matplotlib-3d-basemap/mpl-logo.png
 tags: [Python, plot, satellite]
 ---
+{: .box-note}
+**Note:** All the sample data and code file can be found here: https://github.com/lkhphuc/Matplotlib-3D-Basemap
 
 In this tutorial, I will show you how to plot a 3-Dimension Earth Map from satellite data using Basemap and Matplotlib.
 The result will be something like this: ![plot](/img/matplotlib-3d-basemap/Elec_dens.png)
