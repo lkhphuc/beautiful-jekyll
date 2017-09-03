@@ -66,6 +66,9 @@ footer-links-active:
   youtube: false
   spotify: false
   telephone: false
+  steam: false
+  twitch: false
+  yelp: false
 
 # Select which share links to show in posts
 share-links-active:

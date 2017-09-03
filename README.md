@@ -133,6 +133,7 @@ If you want to use this theme to create a website for a particular repository, i
 | [ja2-stracciatella.github.io](http://ja2-stracciatella.github.io) | Jagged Alliance 2 Stracciatella |
 | [PatientOutcomeFunding.org](http://www.patientoutcomefunding.org/) | Patient Outcome Funding |
 | [ddocent.com](http://ddocent.com/) | RADSeq Bioinformatics and Beyond |
+| [fightthecube.com](http://fightthecube.com/) | Fight The Cube (personal finance education) |
 
 ### Personal websites
 
