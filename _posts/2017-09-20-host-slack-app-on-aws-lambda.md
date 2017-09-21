@@ -2,7 +2,7 @@
 layout: post
 title: Chaining multiple AWS Lambda functions to host a Slack app
 subtitle: Using Python runtime 
-bigimage: /img/aws-lambda/serverless-slack-lambda-gateway.jpg
+bigimg: /img/aws-lambda/serverless-slack-lambda-gateway.jpg
 ---
 If you somehow find out about this tutorial, you probably already know about AWS Lambda and Slack app, but I will just give an short description about it anyway.
 * **AWS Lambda** is a cloud platform by Amazon where the unit of code that you publish is *function*, this way you can write a function and having it online without having to care about setting up server or scaling. AWS Lambda also incorporates well with orther AWS services.
@@ -21,18 +21,21 @@ Now I will walks you through the steps to create a Slack's Slash command, create
 First, refer to this [page](https://api.slack.com/slash-commands) to know the basic about Slash command. To create a Slash command, we first need to create a Slack App. 
 - Go to this page and click on **Create New App**, fill in the name and done, it's easy as that.
 - Now in your Slack app page, go to *Slash command* and create a new command with your choice of name. *Request URL* field is where the Slash command will send the HTTP request to, type in any URL such as *https://example.com*, we will comeback and edit this later.
+![create-slash](/img/aws-lambda/create-slash.png)
+
 ## Step 2: Create Lambda function to handle the request
 Sign in to your AWS Console and head for Lambda page then press *Create function*.
-1. Click the orange button *Author from scratch* - we will upload the code later.
-2. Now in the *Configure triggers* step, click on the square that point to the Lambda function and select **API Gateway** as our trigger.
+* Click the orange button *Author from scratch* - we will upload the code later.
+* Now in the *Configure triggers* step, click on the square that point to the Lambda function and select **API Gateway** as our trigger.
 
 {: .box-note}
 **Note:** For those who wonder, **API Gateway** will setup an URL that handles the HTTP request from Slash command. The **API Gateway** also integrates well with Lambda function that it can trigger it when some activities happen with the URL from **API Gateway** - just exactly what we need.
 
 ![API-Gateway](/img/aws-lambda/api-gateway.png)
-3. Next step, enter a name, description, choose Python 3.6 as Runtime. In the code entry paste this in: 
 
-{% highlight python %}
+* Next step, enter a name, description, choose Python 3.6 as Runtime. In the code entry paste this in: 
+
+```python
 import os
 import json
 from urllib.parse import parse_qs
@@ -41,7 +44,8 @@ import boto3
 # Token use to verify the request really came from our Slash command
 expected_token = os.environ['expect_token']
 
-# Function to create a respond for the Slash command, it's must contain a statusCode, body and header
+# Function to create a respond for the Slash command, 
+# it's must contain a statusCode, body and header
 def respond(err, res=None):
     return {
         'statusCode': '400' if err else '200',
@@ -68,7 +72,8 @@ def lambda_handler(event, context):
     sns_publish(json.dumps(params))
     return respond(None, output)
 
-# Function to publish message to SNS event, this event will inturn trigger our second lambda function
+# Function to publish message to SNS event, 
+# this event will inturn trigger our second lambda function
 def sns_publish(message):
     client = boto3.client(
                 'sns', 
@@ -77,46 +82,52 @@ def sns_publish(message):
                 region_name='ap-southeast-1'
             )
     client.publish(TopicArn='to-be-edited-later', Message=message)
-{% endhighlight %}
+```
 
-In the code above, there're some Keys that we need to create and assign before our function can run. Let's do that in the next steps.
+In the code above, there're some **Keys** that we need to create and assign before our function can run. Let's do that in the next steps.
 
-4. Create a *aws_access_key_id* and *aws_secret_access_key*
-""
-AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources for your users. You use IAM to control who can use your AWS resources (authentication) and what resources they can use and in what ways (authorization).""
-Now we need to create a User with admin privileges to have our *id and key* to use above.
+## Step 3: Create a *aws_access_key_id* and *aws_secret_access_key*
+> "AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources for your users. You use IAM to control who can use your AWS resources (authentication) and what resources they can use and in what ways (authorization)."
+
+Now we need to create a User with admin privileges to have our *id and key*.
 Open a new tab and go to *AWS IAM* console, create a new *User*, and give it *Programmatic access* type.
 ![iam-access](/img/aws-lambda/iam-access.png)
 Now create a user group with admin access, in the final step, you will be provided with an *Access key ID* and *Secret Access key*, take note or copy it to somewhere as you can only see the *Secret Access key* **ONCE**.
 
-5. Get *expected_token*
+## Step 4: Get *expected_token*
 Go back to your Slack App on Slack API site, in the *Basic Information* section, take note on the *Verification Token* there.
+![exp-token](/img/aws-lambda/exp-token.png)
 
-6. Provide the access key Lambda function
-Now switch back to the Lambda function tab. As you can see from  the code, we use 3 weird variables, has the form `os.environ['whatever']`. Each of these variable is declared in the environment that our code is executed upon, this way we don't have to explicitly give up the *secret* on our code.
+## Step 5: Provide the access key to the Lambda function
+Now switch back to the Lambda function tab. As you can see from  the code, we use 3 weird variables, has the form `os.environ['whatever']`. Each of these variable is declared in the environment that our code is executed upon, this way we don't have to explicitly give up the *secret* on our code. 
+
 AWS Lambda provides a very easy way for us to declare environment variables. Just scroll down a bit, in the *Environment variables* fields, provide these variables with the Key you just created as follow, with *expected_token* is *Verification token* in step 5 and the other 2 variables are the *id and key* from step 4:
 ![env-var](/img/aws-lambda/env-var.png)
 
-7. Get the trigger URL and paste it in Slash command
+# Step 6: Get the trigger URL and paste it in Slash command
 After you've create a Lambda function with API Gateway trigger, go to *Triggers* tab, click on the *API Gateway* and copy the *Invoke URL*.
-Now go back to *Slack App*, at *Slash command* edit the *Request URL* to the *Invoke URL*.
+Go back to *Slack App*, at *Slash command* edit the *Request URL* to the *Invoke URL*.
+
 Now every time the *Slash command* is called, an HTTP request contains the information about the *Slash command* will be sent to the URL above, which passes down the information to our Lambda function and triggers it to work.
 
-8. Give your scope Slack App some permission scopes and install it to your workspace
+# Step 7: Give your scope Slack App some permission scopes and install it to your workspace
 Well, the header says it all. Just go to *OAuth & Permissions*, scroll down to *Scopes*, add a fews scopes that make sense for you app, scroll it back up and click install to your workspace.
 ![oauth](/img/aws-lambda/oauth.png)
 
-9. Create SNS event so Lambda function can publish to it
-This step is simple, just go to *AWS SNS console*, create a *Topic*, name it and copy the *ARN* created. 
-Now go back to the code of the first Lambda function, in the *TopicArn* in *sns_publish* function, edit to be the newly generated *ARN*.
+# Step 8: Create SNS event so Lambda function can publish to it
+This step is simple, just go to *AWS SNS console*, create a *Topic*, name it and copy the *ARN* of the Topic you just created. 
+Now go back to the code of the first Lambda function, in the *TopicArn* in *sns_publish* function, edit it to be the newly generated *ARN*.
 
-#### Hooray. At this step, you now have a Slash command that can trigger a Lambda function throught *API Gateway*, and have that Lambda function publish to a *SNS Topic*
-#### In the next steps, we will create another Lambda function that is triggered when an event is published to this *SNS Topic*, have it done something and then respond back to the original Slash command.
+#### Hooray. 
+At this step, you now have a Slash command that can trigger a Lambda function throught *API Gateway*, and have that Lambda function publish to a *SNS Topic*
 
-10. Create second Lambda function triggered by SNS event 
+In the next steps, we will create another Lambda function that is triggered when an event is published to this *SNS Topic*, have it done something and then respond back to the original Slash command.
+
+# Step 9: Create second Lambda function triggered by SNS event 
 Repeat step 1 and 2, but in step 2, instead of choosing *API Gateway*, choose *SNS* and select the *SNS event* we created above.
+
 In the code entry, paste this in:
-{% highlight python %}
+```python
 import os
 import json
 from urllib.parse import parse_qs
@@ -145,11 +156,17 @@ def lambda_handler(event, context):
     response_url = message['response_url'][0]
     #Send the response
     r = requests.post(response_url, data=json.dumps(respond("Your response here")))
-{% endhighlight %}
+```
 
-## Finish
-Oh yeah. Now save the second Lambda functions and then we're done. You have a Slash app that triggered a Lambda that return an acknowledgement message function through *API Gateway*, this Lambda function in turn triggers a second Lambda function that do heavylifting work through AWS SNS. The second Lambda function can also respond to the original *Slash command* through a *Webhook response URL*
-![summ-command](/img/aws-lambda/summ-command.png)
+# Finish
+Oh yeah. Now save the second Lambda functions and then we're done. 
+
+You have a Slash app that triggered a Lambda that return an acknowledgement message function through *API Gateway*, this Lambda function in turn triggers a second Lambda function that do heavylifting work through AWS SNS.
+
+The second Lambda function can also respond to the original *Slash command* through a *Webhook response URL.*
+
 My sample Slash command
-![summ-respond](/img/aws-lambda/summ-response.png)
+![summ-command](/img/aws-lambda/summ-command.png)
+
 My sample Slash's response, from first and second Lambda functions.
+![summ-respond](/img/aws-lambda/summ-response.png)
