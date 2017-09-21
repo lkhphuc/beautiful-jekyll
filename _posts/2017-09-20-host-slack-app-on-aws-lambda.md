@@ -145,7 +145,7 @@ def lambda_handler(event, context):
     response_url = message['response_url'][0]
     #Send the response
     r = requests.post(response_url, data=json.dumps(respond("Your response here")))
-{% endhiglight %}
+{% endhighlight %}
 
 ## Finish
 Oh yeah. Now save the second Lambda functions and then we're done. You have a Slash app that triggered a Lambda that return an acknowledgement message function through *API Gateway*, this Lambda function in turn triggers a second Lambda function that do heavylifting work through AWS SNS. The second Lambda function can also respond to the original *Slash command* through a *Webhook response URL*
