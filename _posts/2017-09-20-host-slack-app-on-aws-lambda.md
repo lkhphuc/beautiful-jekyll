@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Implement your own ML algorithm: Chaining multiple AWS Lambda functions to host a Slack app
+title: Chaining multiple AWS Lambda functions to host a Slack app
 subtitle: Using Python runtime 
+bigimage: /img/aws-lambda/serverless-slack-lambda-gateway.jpg
 ---
 If you somehow find out about this tutorial, you probably already know about AWS Lambda and Slack app, but I will just give an short description about it anyway.
-**AWS Lambda** is a cloud platform by Amazon where the unit of code that you publish is *function*, this way you can write a function and having it online without having to care about setting up server or scaling. AWS Lambda also incorporates well with orther AWS services.
-**Slack app** is an application that you can integrate into your Slack channel and have it automate tasks for the team. In this tutorial, we will built a particular type of Slack app, that is a **Slash command**.
+* **AWS Lambda** is a cloud platform by Amazon where the unit of code that you publish is *function*, this way you can write a function and having it online without having to care about setting up server or scaling. AWS Lambda also incorporates well with orther AWS services.
+* **Slack app** is an application that you can integrate into your Slack channel and have it automate tasks for the team. In this tutorial, we will built a particular type of Slack app, that is a **Slash command**.
 ### Here's the problem
 Slash command will send an HTTP POST request to triggered a Lambda function and demands a respond back in less than 3 seconds. This is OK if the Lambda function is designed to do some light job and can finished under 3 seconds, but what if the Lambda function need to do more heavylifting job, the Slash command will declared that there was problem with the server, which is not cool at all for the heavy-lifting Lambda function.
 ### The solution:
@@ -24,11 +25,14 @@ First, refer to this [page](https://api.slack.com/slash-commands) to know the ba
 Sign in to your AWS Console and head for Lambda page then press *Create function*.
 1. Click the orange button *Author from scratch* - we will upload the code later.
 2. Now in the *Configure triggers* step, click on the square that point to the Lambda function and select **API Gateway** as our trigger.
+
 {: .box-note}
 **Note:** For those who wonder, **API Gateway** will setup an URL that handles the HTTP request from Slash command. The **API Gateway** also integrates well with Lambda function that it can trigger it when some activities happen with the URL from **API Gateway** - just exactly what we need.
+
 ![API-Gateway](/img/aws-lambda/api-gateway.png)
 3. Next step, enter a name, description, choose Python 3.6 as Runtime. In the code entry paste this in: 
-```python
+
+{% highlight python %}
 import os
 import json
 from urllib.parse import parse_qs
@@ -73,7 +77,8 @@ def sns_publish(message):
                 region_name='ap-southeast-1'
             )
     client.publish(TopicArn='to-be-edited-later', Message=message)
-```
+{% endhighlight %}
+
 In the code above, there're some Keys that we need to create and assign before our function can run. Let's do that in the next steps.
 
 4. Create a *aws_access_key_id* and *aws_secret_access_key*
@@ -111,7 +116,7 @@ Now go back to the code of the first Lambda function, in the *TopicArn* in *sns_
 10. Create second Lambda function triggered by SNS event 
 Repeat step 1 and 2, but in step 2, instead of choosing *API Gateway*, choose *SNS* and select the *SNS event* we created above.
 In the code entry, paste this in:
-```python
+{% highlight python %}
 import os
 import json
 from urllib.parse import parse_qs
@@ -140,7 +145,7 @@ def lambda_handler(event, context):
     response_url = message['response_url'][0]
     #Send the response
     r = requests.post(response_url, data=json.dumps(respond("Your response here")))
-```
+{% endhiglight %}
 
 ## Finish
 Oh yeah. Now save the second Lambda functions and then we're done. You have a Slash app that triggered a Lambda that return an acknowledgement message function through *API Gateway*, this Lambda function in turn triggers a second Lambda function that do heavylifting work through AWS SNS. The second Lambda function can also respond to the original *Slash command* through a *Webhook response URL*
