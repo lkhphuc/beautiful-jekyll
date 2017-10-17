@@ -1,11 +1,13 @@
 ---
 layout: page
 title: About me
-subtitle: Some minor details
+show-avatar: true
+bigimg: /img/fly.jpg 
 ---
 
 My name is Le Khac Hong Phuc. I currently study Computer Science at the Vietnamese German University in Viet Nam.
-What else do you need?
+I am interested in Artificial Intelligence and Blockchain technology.
+Want to contact me? Email me at: phuc(dot)lkh(at)gmail(dot)com or checkout my Twitter at [@lkhphuc](https://twitter.com/lkhphuc).
 
 ### my history
 
