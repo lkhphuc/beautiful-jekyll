@@ -4,6 +4,11 @@ title: Short introduction about Quantum Computer and Quantum Cryptography
 subtitle: What is it and why it's interesting with no complex physics
 bigimg: /img/quantum/entanglement.jpg
 ---
+
+{: .box-note}
+I also made a slide with notes about the subject. Check out [here](https://docs.google.com/presentation/d/1rqXF5lei-gQy67t951_ic1Ppi-qhdQ5ylwXlFzKW1VQ/edit?usp=sharing) if you need one.
+
+
 In recent years, beside the *Conventional Computer*, a new type of computer called *Quantum Computer* has received a lot of attention and is in very active development. The Quantum computer is based on *Quantum Mechanics*, compare to the conventional computer that is based on mathematical logic and boolean algebras. There are a lot of application for this new type of computer but one of the most important is *Quantum Cryptography.*
 
 ## Layout
@@ -28,7 +33,7 @@ Even though it’s can represent all the configuration of traditional bits in pa
 
 ## Quantum Cryptography in context
 There are two types of cryptography,, symmetric cryptography that use the same key for encryption and decryption, and asymmetric cryptography that use public and private key for encryption and decryption. Currently, symmetric encryption is fast but limited by the method of sharing the secret key, the most secure way is hand-to-hand but this required participants to meet each others in the first place and thus the secret key cannot be changed often enough. One way to get around this is to use the public key cryptography and signature scheme to initially share the secret key. And that is pretty much how cryptography is applied on the internet today. One of the most popular algorithm of asymmetric cryptography is RSA. Every time you browse the web or send an message, you probably use RSA. The security of RSA is guaranteed by the complexity of factoring problem, which is: given a number, find its prime factors. In traditional computer, the time its take to factor a number increases exponentially with the length of the number, so a large enough number may takes hundred or thousand of years to factor, which is way too long for any practical reason for trying to break the encryption. 
-[factor](/img/quantum/factor2.png)
+![factor](/img/quantum/factor2.png)
 However, with Quantum Computer and its amazingly parallel computing power, large number can be factored efficiently with Shor algorithm, an algorithm created by Peter Shor, an MIT math professor. The time its take to factor big number is no longer exponentially correlated to the input and the reliability of RSA is going away.
 
 When quantum computer that can run the Shor algorithm is created in the near future, there are two directions to pursuit and save the internet’s privacy, that is either we found a different public key encryption scheme that relies on different mathematical problems so complex even Quantum computer can not solve efficiently or we exploit Quantum Mechanical property to create an even better way to encrypt data than public key encryption. 
@@ -40,7 +45,7 @@ Those laws are: the Heisenberg’s Uncertainty principle states that the positio
 This is used to detect eavesdropping in quantum key distribution, if a quantum key has been intervened by a third party, the key is simply dropped before any sensitive data is encrypted using that key. On the other hand, if no tapping was detected, the security of the key is guaranteed by the law of physics.
 
 The field of Quantum Cryptography is in very active development, just last month, the first quantum-encrypted video call was made between China and Vienna. This first demonstration of Quantum key distribution  was made possible with the Chinese’s dedicated quantum satellite: Micius. Two entangled photons in superposition state that encode the secret key was created in the satellite and then transmitted to Beijing and Vienna. This key is then used to encrypt data over traditional VPN network.
-[satellite](/img/quantum/satellite.jpg)
+![satellite](/img/quantum/satellite.jpg)
 
 ## Summary
 In summary, Quantum computer exploits the effect of quantum mechanics to solve problems that can utilize the parallel nature of quantum superposition. One of the most important application quantum computer is in Cryptography, where quantum computer is a threat to current RSA asymmetric cryptography but it’s also enable secure way to communicate and the reliability is guaranteed by law of physics.
