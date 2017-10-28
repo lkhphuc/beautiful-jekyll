@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minimal
 title: About me
 show-avatar: true
 ---
