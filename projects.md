@@ -1,9 +1,8 @@
 ---
 layout: page
-title: About me
+title: Projects
 show-avatar: true
 ---
-Where I list my projects.
 
 # [Slack summarizer](https://lkhphuc.github.io/slack-visual-summary/)
 
