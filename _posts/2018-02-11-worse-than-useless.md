@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Tệ hơn cả vô dụng, một Hệ thống giám sát tài chính
-subtitle: Worse than useless, a Financial Surveillance
+subtitle: Worse than useless, Financial Surveillance
 bigimg: /img/worseuseless/surveillance.jpg
 image: /img/worseuseless/bitcoin.jpg
 ---
 
-Andreas Antonopoulos là một lập trình viên và diễn giã nổi tiếng về Bitcoin và những ảnh hưởng của nó lên xã hội con người. Một trong những bài nói của ông mà tôi thấy hay nhất có tiêu đề: "Tệ hơn cả vô dụng: Hệ thống giám sát tài chính". Trong bài nói này ông đã chỉ ra sự giả tạo của hệ thống ngân hàng, nhấn mạnh tầm quan trọng của sự ẩn danh và lý giải tại sao Bitcoin có thể làm cho xã hội tốt đẹp hơn, hay ít ra là không làm cho nó tệ hơn như những gì hệ thống giám sát tài chính đang làm. 
+Andreas Antonopoulos là một lập trình viên và diễn giả nổi tiếng về Bitcoin và những ảnh hưởng của nó lên xã hội loài người. Một trong những bài nói của ông mà tôi thấy hay nhất có tiêu đề: "Tệ hơn cả vô dụng: Hệ thống giám sát tài chính". Trong bài nói này ông đã chỉ ra sự giả tạo của hệ thống ngân hàng, nhấn mạnh tầm quan trọng của sự ẩn danh và lý giải tại sao Bitcoin có thể làm cho xã hội tốt đẹp hơn, hay ít ra là không làm cho nó tệ hơn như những gì hệ thống giám sát tài chính đang làm. 
 
-Dưới đây tôi xin dịch lại bài nói chuyện của Andreas với mong muốn những kiến thức và ý tưởng của ông có thể tiếp cận được với càng nhiều người càng tốt, đặc biệt là cộng đồng những người trẻ Việt Nam. Tôi cũng đã nộp bản dịch phụ đề Tiếng Việt cho video trên Youtube nhưng không biết khi nào được duyệt. Nếu ai muốn thì có thể xem trực tiếp video bài nói chuyện của Andreas tại đây: [https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop](https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop). Tuy nhiên bản dịch dưới đã được tôi sửa format và câu văn cho tự nhiên với Tiếng Việt hơn so với bản dịch phụ đề thô (sẽ có) trên Youtube.
+Dưới đây tôi xin dịch lại bài nói chuyện của Andreas với mong muốn những kiến thức và ý tưởng của ông có thể tiếp cận được với càng nhiều người càng tốt, đặc biệt là cộng đồng những người trẻ Việt Nam như tôi. Tôi cũng đã nộp bản dịch phụ đề Tiếng Việt cho video trên Youtube nhưng không biết khi nào được duyệt. Nếu ai muốn thì có thể xem trực tiếp video bài nói chuyện của Andreas tại đây: [https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop](https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop). Tuy nhiên bản dịch dưới đã được tôi sửa format và câu văn cho tự nhiên hơn so với bản dịch phụ đề thô (sẽ có) trên Youtube.
 
 # Tệ hơn cả vô dụng: Hệ thống giám sát tài chính
 
@@ -21,20 +21,21 @@ Hippocrates thực ra là một người rất ủng hộ việc chích máu. Ch
 
 Người xưa nhìn "khoa học" như một vấn đề về bản chất, về khí chất. Đất, lửa, nước, khí. Một phần của ý tưởng chích máu là, nếu những yếu tố trên không cân bằng, bạn cần chích ra một ít máu để đưa mọi thứ về lại trạng thái cân bằng. Tập tục này tiếp tục được thực hành qua tận tới  thế kỷ 19. Một điều khá thú vị về nó đó là một nạn nhân nổi tiếng nhất của tục chích máu này lại là một trong các Tổ sư lập quốc của Hoa Kỳ: George Washington.
 
-Cuối cuộc đời, George Washington một ngày tỉnh dậy với cơn đau họng. Ông ấy cũng là một người hâm mộ lớn trong việc coi tập tục chích máu như là một kinh ngiệm y học. Ông đã mời các bác sĩ / tên đồ tể của mình thực hiện tục chích máu  tinh tế này. Trong bốn ngày tiếp theo, họ đã chích ra khỏi người ông khoảng bảy pints máu. Hồ sơ lịch sử ghi là: "Mặc dù đã được điều trị, ông đã mất bốn ngày sau đó." Ngày nay chúng ta lại nói rằng "bởi vì đã bị điều trị như vậy, ông đã mất bốn ngày sau đó." Thật là mỉa mai rằng tập tục này vẫn tồn tại trong 2.500 năm.
+Cuối cuộc đời, George Washington một ngày tỉnh dậy với cơn đau họng. Ông ấy cũng là một người hâm mộ lớn trong việc coi tập tục chích máu như là một kinh ngiệm y học. Ông đã mời các bác sĩ / tên đồ tể của mình thực hiện tục chích máu  tinh tế này. Trong bốn ngày tiếp theo, họ đã chích ra khỏi người ông khoảng bảy pints (người dịch: 3.3 lít) máu. Hồ sơ lịch sử ghi là: "Mặc dù đã được điều trị, ông đã mất bốn ngày sau đó." Ngày nay chúng ta lại nói rằng "bởi vì đã bị điều trị như vậy, ông đã mất bốn ngày sau đó." Thật là mỉa mai rằng tập tục này vẫn tồn tại trong 2.500 năm.
 
-Tại sao việc nhớ lấy ý niệm "không được làm hại" này lại rất quan trọng? Bởi vì nếu bạn không làm theo những phương pháp khoa học, nhiều thói quen phổ biến mà chúng ta áp dụng ngày nay không dựa trên khoa học, mà dựa trên mê tín, giai thoại, ước nguyện, và ý niệm về *đạo đức công chính* (righteous morality)*. Một trong số đó là hệ thống giám sát tài chính và hệ thống các quy tắc **KYC / AML**. *(Know your customer / Anti Money Laundering) (Biết khách hàng là ai / Chống rửa tiền)*
+Tại sao việc nhớ lấy ý niệm "không được làm hại" này lại rất quan trọng? Bởi vì nếu bạn không làm theo những phương pháp khoa học, nhiều thói quen phổ biến mà chúng ta áp dụng ngày nay không dựa trên khoa học, mà dựa trên mê tín, giai thoại, ước nguyện, và ý niệm về *đạo đức công chính* (*righteous morality)*. Một trong số đó là hệ thống giám sát tài chính và hệ thống các quy tắc **KYC / AML**. *(Know your customer: Biết khách hàng là ai / Anti Money Laundering: Chống rửa tiền)*.
 
-Hệ thống ngân hàng hiện đại được đưa vào hoạt động theo Đạo luật Bảo mật Ngân hàng năm 1970, được hình thành mà 
-không dựa trên cơ sở khoa học. Nó dựa trên sự suy nghĩ đạo đức chân chính rằng "người xấu" không nên có quyền tiếp cận tiền và miễn là chúng ta tin tưởng vào những người có thẩm quyền nói cho chúng ta biết những người xấu đó là ai (và tự cho rằng họ không phải là những người xấu), thì rồi mọi thứ sẽ đâu ra đó thôi.
+Hệ thống ngân hàng hiện đại được đưa vào hoạt động theo Đạo luật Bảo mật Ngân hàng năm 1970, được hình thành mà không dựa trên bất kì cơ sở khoa học. Nó dựa trên sự suy nghĩ đạo đức công chính rằng "người xấu" không nên có quyền tiếp cận tiền và miễn là chúng ta tin tưởng vào những người có thẩm quyền nói cho chúng ta biết những người xấu đó là ai (và giả định rằng họ không phải là những người xấu), thì rồi mọi thứ sẽ đâu ra đó thôi.
 
 Nếu bạn chỉ trích ý tưởng này, người ta sẽ không chứng minh hoặc thuyết phục bạn bằng sự thật, dữ liệu dựa trên khoa học. Bạn sẽ bị cáo buộc là không có đủ đạo đức công chính để hiểu rằng chúng ta phải (trong hàng đống lý do) *"bảo vệ trẻ em."* 
 
 - "Sao không ai nghĩ tới những đứa trẻ vậy?"
 
-Vì những tên tội phạm thì nó ở ngoài đó. Có những người xấu xa, và nếu những người xấu đó có thể sử dụng tiền họ có thể dùng nó để làm những điều xấu. Rất khó để truy tố những điều xấu nhưng lại rất dễ dàng để truy tố tiền. Và vì vậy chúng ta làm điều đó. Rồi cách đó có hoạt động không? 
+Vì những tên tội phạm thì nó ở ngoài đó. Có những người xấu xa, và nếu những người xấu đó có thể sử dụng tiền họ có thể dùng nó để làm những điều xấu. Rất khó để truy tố những điều xấu nhưng lại rất dễ dàng để truy tố tiền. 
 
-**Không.**
+Và thế là chúng ta truy tố tiền. Rồi cách đó có hoạt động không? 
+
+#### Không.
 
 Nhưng nếu hành động đó vô dụng, vậy thì đã tốt quá rồi. Đằng này nó không vô dụng, *nó còn tệ hơn cả vô dụng*. Trên thực tế, nó có hại rất lớn.
 
@@ -118,9 +119,9 @@ Mọi người hỏi tôi: "Bạn nghĩ vấn đề lớn nhất với Bitcoin l
 
 - Là việc đào bitcoin bị tập trung hóa?
 
-Không, đó là chúng ta không có đủ sự ẩn danh. Chúng ta không có đủ sự riêng tư. Chúng ta nên khắc phục vấn đề đó trước khi tiền mã hóa trở nên quá phổ biến. Việc tiếp nhận một nền tảng mà không có đủ sự riêng tư là cực kỳ nguy hiểm. Nếu bạn là người duy nhất thực hiện những giao dịch nặc danh, bạn không hề nặc danh.
+Không, **đó là chúng ta không có đủ sự ẩn danh. Chúng ta không có đủ sự riêng tư. Chúng ta nên khắc phục vấn đề đó trước khi tiền mã hóa trở nên quá phổ biến.** Việc tiếp nhận một nền tảng mà không có đủ sự riêng tư là cực kỳ nguy hiểm. Nếu bạn là người duy nhất thực hiện những giao dịch nặc danh, bạn không hề nặc danh.
 
- Những gì chúng ta cần là phổ biến sự riêng tư. Đây không nên là một lựa chọn mà tôi phải bấm chọn trong ví Samourai của tôi nói rằng 'Sử dụng Tor'. Nó nên được mặc định trên tất cả các ví, tất cả mọi lúc. Không nên có giao dịch nào mà không bí mật.
+Những gì chúng ta cần là phổ biến sự riêng tư. Đây không nên là một lựa chọn mà tôi phải bấm chọn trong ví Samourai của tôi nói rằng 'Sử dụng Tor'. Nó nên được mặc định trên tất cả các ví, tất cả mọi lúc. Không nên có bất cứ giao dịch nào mà không bí mật.
 
 Đây là điều thú vị: nếu bạn hỏi các ngân hàng rằng họ có muốn có các giao dịch nặc danh không, họ sẽ trả lời rằng đương nhiên là muốn! "Công nghệ sổ cái phân tán" (Distributed ledger) đang được xây dựng với sự ẩn danh. Họ đang sử dụng "bằng chứng không-kiến ​​thức phạm vi" (Zero-Knowledge Range Proof), bộ trộn lẫn để tạo ra các giao dịch bí mật. Họ đang cố gắng xây dựng hệ thống thanh toán bí mật và ẩn danh. Tại sao? Bởi vì họ không thể tin tưởng vào *đứa chó đẻ khốn nạn* ở phía đối diện cái bàn của họ, những người đang điều hành các ngân hàng đối thủ. Nếu họ biết những gì đang xảy ra trên hệ thống đối thủ, họ sẽ chạy trước trong mỗi giao dịch của bạn, Pump và dump (nd: bơm giá lên cao và bán nhanh) tất cả các loại tài sản. Tại sao?
 Bởi vì đó là những gì họ làm mỗi ngày. Tất nhiên, vì họ không thể tin tưởng lẫn nhau, họ hiểu được nhu cầu cho sự riêng tư. Họ sẽ xây dựng blockchains riêng của họ, mạng lưới thanh toán và bù trừ của họ và họ sẽ đảm bảo chắc chắn rằng họ có sự bảo mật, riêng tư, ẩn danh, và khả năng chối từ. Họ sẽ đảm bảo rằng họ có tất cả những điều đó để họ có thể tiếp tục kinh doanh như thường lệ.
