@@ -2,9 +2,11 @@
 layout: post
 title: Tệ hơn cả vô dụng: Hệ thống giám sát tài chính
 subtitle: Worse than useless: Financial Surveillance
+bigimg: /img/worseuseless/surveillance.jpg
+image: /img/worseuseless/bitcoin.jpg
 ---
 
-Andreas Antonopoulos là một lập trình viên và diễn giã nổi tiếng về Bitcoin và những ảnh hưởng của nó lên xã hội con người. Một trong những bài nói của ông mà tôi thấy hay nhất có tiêu đề: "Tệ hơn cả vô dụng: Hệ thống giám sát tài chính". Trong bài nói này ông đã chỉ ra sự giả tạo của hệ thống ngân hàng và lý giải tại sao Bitcoin có thể làm cho xã hội tốt đẹp hơn, hay ít ra là không làm cho nó tệ hơn như những gì hệ thống giám sát tài chính đang làm. 
+Andreas Antonopoulos là một lập trình viên và diễn giã nổi tiếng về Bitcoin và những ảnh hưởng của nó lên xã hội con người. Một trong những bài nói của ông mà tôi thấy hay nhất có tiêu đề: "Tệ hơn cả vô dụng: Hệ thống giám sát tài chính". Trong bài nói này ông đã chỉ ra sự giả tạo của hệ thống ngân hàng, nhấn mạnh tầm quan trọng của sự ẩn danh và lý giải tại sao Bitcoin có thể làm cho xã hội tốt đẹp hơn, hay ít ra là không làm cho nó tệ hơn như những gì hệ thống giám sát tài chính đang làm. 
 
 Dưới đây tôi xin dịch lại bài nói chuyện của Andreas với mong muốn những kiến thức và ý tưởng của ông có thể tiếp cận được với càng nhiều người càng tốt, đặc biệt là cộng đồng những người trẻ Việt Nam. Tôi cũng đã nộp bản dịch phụ đề Tiếng Việt cho video trên Youtube nhưng không biết khi nào được duyệt. Nếu ai muốn thì có thể xem trực tiếp video bài nói chuyện của Andreas tại đây: [https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop](https://www.youtube.com/watch?v=n4F-h4xuXMk&t=872s&ab_channel=aantonop)
 

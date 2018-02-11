@@ -3,6 +3,7 @@ layout: post
 title: Chaining multiple AWS Lambda functions to host a Slack app
 subtitle: Using Python runtime 
 bigimg: /img/aws-lambda/serverless-slack-lambda-gateway.jpg
+tags: [AWS, Python, Lambda]
 ---
 If you somehow find out about this tutorial, you probably already know about AWS Lambda and Slack app, but I will just give an short description about it anyway.
 * **AWS Lambda** is a cloud platform by Amazon where the unit of code that you publish is *function*, this way you can write a function and having it online without having to care about setting up server or scaling. AWS Lambda also incorporates well with orther AWS services.
